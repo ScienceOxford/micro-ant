@@ -1,4 +1,4 @@
-# microbit-antweight
+# micro-ant
 
 in progress...
 

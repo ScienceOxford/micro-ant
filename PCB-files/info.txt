@@ -1,0 +1,3 @@
+To be added:
+KiCad custom libraries & footprints
+Bill of Materials

@@ -1,6 +1,10 @@
 from microbit import *
 # Instructables Step 3
 
+#import radio
+
+#radio.config(channel=_, group=_, queue=1)
+#radio.on()
 
 '''
 INPUTS

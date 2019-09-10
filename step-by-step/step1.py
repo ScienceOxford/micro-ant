@@ -25,8 +25,8 @@ def button_press():
                 return buttons[number]
 
 def joystick_push():
-    x = pin0.read_analog() - 518
-    y = pin1.read_analog() - 523
+    x = pin0.read_analog()
+    y = pin1.read_analog()
     return x, y
 
 while True:

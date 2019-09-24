@@ -1,9 +1,10 @@
 # micro:bit antweight information
 
-## Contents
+If your charging port has broken, and we have sent you a new one, please follow these instructions!
 
+### Step 1
+Open up your robot to expose the battery.
 
+![battery in robot](battery1.jpg "battery in robot")
 
-If your charging port has broken, and we sent you a new one, please follow these instructions:
-
-[Test](charger.md)
+Unplug your battery.

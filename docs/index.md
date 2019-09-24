@@ -6,7 +6,7 @@ If your charging port has broken, and we have sent you a new one, please follow 
 Connect a microUSB lead to the socket in your new charger - do not plug it into a power source yet.
 
 ![usb port](charger1.JPG "usb port")
-![usb lead in charger](charger1.JPG "usb lead in charger")
+![usb lead in charger](charger2.JPG "usb lead in charger")
 
 ### Step 2
 Open up your robot to expose the battery, then unplug it.

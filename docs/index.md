@@ -3,7 +3,7 @@
 If your charging port has broken, and we have sent you a new one, please follow these instructions!
 
 ### Step 1
-Connect a microUSB lead to the socket in your new charger - do not plug it into a power source yet.
+Gently connect a microUSB lead to the socket in your new charger - do not plug it into a power source yet.
 
 ![usb port](charger1.JPG "usb port")
 ![usb lead in charger](charger2.JPG "usb lead in charger")

@@ -27,3 +27,7 @@ While charging, you should see a red light, which turns blue when the battery is
 
 ![battery charging](charging1.JPG "battery charging")
 ![battery charged](charging2.JPG "battery charged")
+
+### Step 5
+
+Unplug the charger, and plug the battery back into the cable on the robot.

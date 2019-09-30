@@ -1,8 +1,5 @@
 # Added
-  Schematic
-  Gerbers
+Schematic, Gerbers
 
 # To be added
-  Board file
-  KiCad custom libraries & footprints
-  Bill of Materials
+Board file, KiCad custom libraries & footprints, Bill of Materials

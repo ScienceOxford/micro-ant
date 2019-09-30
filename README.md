@@ -1,6 +1,8 @@
 # micro-ant
 
-in progress...
+Click here to find all the information: <a href="https://scienceoxford.github.io/micro-ant">micro-ant</a>
+
+Work in progress!
 
 *Developed by [ScienceOxford](https://scienceoxford.com) for educational purposes. Please give credit where applicable.
 <br>We love seeing what you've created, so tag us when you share! [@ScienceOxford](https://twitter.com/scienceoxford)*

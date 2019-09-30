@@ -59,3 +59,8 @@ p {
   display: inline-block;
   text-decoration: none;
 }
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}

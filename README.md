@@ -1,6 +1,6 @@
 # micro-ant
 
-Click here to find all the information: <a href="https://scienceoxford.github.io/micro-ant" target="_blank">micro-ant</a>
+###Click here to find all the information: <a href="https://scienceoxford.github.io/micro-ant" target="_blank">micro-ant</a>
 
 Work in progress!
 

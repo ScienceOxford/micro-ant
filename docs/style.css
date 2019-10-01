@@ -9,6 +9,7 @@ img {
   max-width: 100%;
   height: auto;
   margin: 10px;
+  margin-bottom: 20px;
 }
 
 body {
@@ -63,4 +64,21 @@ p {
 ul {
   margin-left: 20px;
   margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+ol {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+pre {
+    page-break-inside: avoid;
+    font-family: "Courier New", monospace;
+    line-height: 1.5;
+    border: 2px dotted rgb(34, 35, 34);
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 10px;
 }

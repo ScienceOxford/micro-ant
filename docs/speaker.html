@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>micro:bit antweight information</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo"width="400px" height="auto"></a>
+    <h1>Connecting & Programming a Speaker</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>Follow the instructions below to connect your speaker to your robot, then program it to play tunes or beep!</p>
+    <p><a href="pins.html" target="_blank">If you have not yet soldered the pin connectors onto your robot, click here.</a></p>
+  </div>
+
+  <div id="wiring" class="left">
+    <h3>Wiring</h3>
+
+    <section id="wire_step1">
+      <p><strong>Step 1: </strong>collect your supplies</p>
+      <ol type="A">
+        <li>Your robot, with pin connectors</li>
+        <li>A small speaker</li>
+        <li>Two jump wires</li>
+      </ol>
+      <img src=".\images\speaker_components.JPG" alt="Components: robot, speaker, wires" width="600px" height="auto">
+    </section>
+
+    <section id="wire_step2">
+      <p><strong>Step 2: </strong>push the two jump wires onto the two leads of the speaker</p>
+      <img src=".\images\speaker_wires1.JPG" alt="Speaker with jump leads attached" width="600px" height="auto">
+    </section>
+
+    <section id="wire_step3">
+      <p><strong>Step 3: </strong>connect the wires to your robot</p>
+      <ul>
+        <li>One to a <strong>GND</strong> pin</li>
+        <li>One to a signal pin (the code below uses <strong>pin 12</strong>)</li>
+      </ul>
+      <img src=".\images\speaker_wires2.JPG" alt="Robot with jump leads attached" width="600px" height="auto">
+    </section>
+
+    <section id="wire_notes">
+      <p><strong>Notes:</strong> information about the components</p>
+      <ul>
+        <li>The speaker we are using is a 'passive buzzer'. This means that it will only make a noise when given a signal to do so, but can play a range of tones. You could also connect a pair of headphones or some larger speakers, which would also work with the code below!</li>
+        <li>The jump wires we are using are known as 'female' wires - these are slots, which connect with 'male' pointy wires, such as those on your robot.</li>
+        <li>You can connect a speaker directly to a micro:bit, instead of using your robot, by using crocodile clips instead of jump wires. The robot is not required for the code below to work.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="code" class="left">
+    <h3>Programming</h3>
+
+    <section id="code_step1">
+      <p><strong>Step 1: </strong>playing a tune</p>
+      <p>Open your robot program <a href="https://github.com/ScienceOxford/robocamp-2019-saved-files" target="_blank">(click here to find yours)</a></p>
+      <p>You are going to add new code near the top of your program, underneath <code>import radio</code> and above <code>radio.config</code>.</p>
+      <img src=".\images\add_code.png" alt="Position of new code, between 'import radio' and 'radio.config'" width="600px" height="auto">
+      <p>In this spot, add the following code:</p>
+      <pre><code>import music
+music.play(music.ODE, pin=pin12)</code></pre>
+      <p>What other <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/music.html" target="_blank">tunes</a> can you get the micro:bit to play?</p>
+    </section>
+
+    <section id="code_step2">
+      <p><br><strong>Step 2: </strong>creating your own tune</p>
+      <p>Instead of playing one of the built-in tunes, you can play individual notes and make your own tunes.</p>
+      <p>Replace your <code>music.play</code> line with this code:</p>
+      <pre><code>music.play("C4:2", pin=pin12)</code></pre>
+      <ul>
+        <li>The letter <code>C</code> is the musical note, C.</li>
+        <li>The first number <code>4</code> is the octave.</li>
+        <li>The second number, <code>2</code>, after the colon, <code>:</code>, is the number of beats to play the note for.</li>
+      </ul>
+      <p>You can use notes A-G, with a # after a note to make a sharp, and an R for a rest.</p>
+      <p>To make a tune, use this format:</p>
+      <pre><code>my_tune = ["A2:2", "C3:4", "E4:2", "G5:4"]
+music.play(my_tune, pin=pin12)</code></pre>
+      <ul>
+        <li>Give your tune a name, such as <code>my_tune</code></li>
+        <li>Set it equal to a <em>list</em> - note the square brackets <code>[]</code></li>
+        <li>Seperate each note with a comma, inside it's own speech marks</li>
+      </ul>
+    </section>
+
+    <section id="code_step3">
+      <p><br><strong>Step 3: </strong>using music in your robot code</p>
+      <p>So far, you have tested code so that it runs at the start of your program.<p>
+      <p>Think about when you want a your robot to play a tune...</p>
+      <ul>
+        <li>When you press a <a href="https://www.instructables.com/id/Programming-a-MicroBit-Robot-JoystickBit-Controlle/#step9" target="_blank">button on your joystick</a>?</li>
+        <li>When your robot <a href="https://microbit-micropython.readthedocs.io/en/latest/tutorials/gestures.html" target="_blank">is upside down?</a></li>
+      </ul>
+      <p>To help your code behave as expected, you can tell the micro:bit not to wait until it has finished the tune before moving on to the next instruction:</p>
+      <pre><code>music.play(my_tune, pin=pin12, wait=False)</code></pre>
+    </section>
+  </div>
+</body>
+
+  <footer class="links bg_pink">
+    <a href="extensions.html">Go Back</a>
+  </footer>
+  
+</html>

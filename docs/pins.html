@@ -15,40 +15,84 @@
   </header>
 
   <div id="intro">
-    <p>In progress...</p>
+    <p>Follow these instructions to add connectors to your robot, which you can then use to attach extra components.</p>
   </div>
 
   <div id="step1" class="left">
-    <h3>Step 1</h3>
-    <p>Gently connect a microUSB lead to the socket in your new charger - do not plug it into a power source yet.</p>
-    <img src=".\images\charger1.JPG" alt="usb port" width="600px" height="auto">
-    <img src=".\images\charger2.JPG" alt="usb lead in charger" width="600px" height="auto">
+    <h3>Step 1 - collect your components and tools</h3>
+    <ol type="A">
+      <li>Your robot</li>
+      <li>Pin connectors</li>
+      <li>Protective mat</li>
+      <li>Soldering iron (plus stand and sponge)</li>
+      <li>Solder</li>
+      <li>Mini breadboard</li>
+      <li>Wire cutters</li>
+    </ol>
+    <img src=".\images\pins_components.JPG" alt="Components" width="600px" height="auto">
   </div>
 
   <div id="step2" class="left">
-    <h3>Step 2</h3>
-    <p>Open up your robot to expose the battery, then unplug it.</p>
-    <img src=".\images\battery1.JPG" alt="battery in robot" width="600px" height="auto">
-    <img src=".\images\battery2.JPG" alt="battery unplugged" width="600px" height="auto">
+    <h3>Step 2 - prepare your robot</h3>
+    <ol>
+      <li>Remove your robot's body, so that you can access the yellow circuit board.</li>
+      <li>Unplug your robot's battery - this will project you, the battery and the micro:bit if anything gets connected incorrectly at any point.</li>
+      <li>Find the pin connector section - underneath the edge connector.</li>
+      <img src=".\images\pins_pcb.JPG" alt="Close-up of pin connector area of circuit board" width="600px" height="auto">
+      <li>Remove anything glued onto this section, for example your motor case.</li>
+      <ul style="list-style-type:none">
+        <li><em>Be careful not to damage the circuit board.</em></li>
+        <li><em>Isopropyl alcohol is good for removing hot glue.</em></li>
+      </ul>
+      <li>Check that nothing else is in your way, and you can access the holes on the circuit board.</li>
+    </ol>
   </div>
 
   <div id="step3" class="left">
-    <h3>Step 3</h3>
-    <p>Connect your new charger to your robot's battery.</p>
-    <img src=".\images\connected1.JPG" alt="battery connected" width="600px" height="auto">
+    <h3>Step 3 - prepare your pin connectors</h3>
+    <ol>
+      <li>Look at your circuit board. This section is broken up into four sections:</li>
+      <ul>
+        <li>3 pins for GND - go to the ground pin on the micro:bit</li>
+        <li>3 pins for 3V3 - go to the 3V pin on the micro:bit</li>
+        <li>5 pins for 12-16 - go to the signal pins on the micro:bit</li>
+        <li>2 pins for 19-20 - go to the serial pins on the micro:bit</li>
+      </ul>
+      <img src=".\images\pins_pcb_labelled.JPG" alt="Close-up of circuit board with labels highlighted" width="600px" height="auto">
+      <li>Seperate sections of pins from the rows of pin connectors, using a twisting motion, or your wire cutters:</li>
+      <ul>
+        <li>3 black pins for GND</li>
+        <li>3 red pins for 3V3</li>
+        <li>5 pins in another colour for 12-16</li>
+        <li>2 pins in another colour for 19-20</li>
+      </ul>
+      <p><em>The pins are all the same, but using different colours will make it easier for you to see what you are connecting later!</em></p>
+      <img src=".\images\pins_pins.JPG" alt="Sections of pins" width="600px" height="auto">
+      <li>Put your pins into the robot so that the long ends are on the side of the board with the pin labels.</li>
+      <p>You will be soldering the short end of the pins - the long end will be what you connect your parts to.</p>
+      <img src=".\images\pins_in_robot.JPG" alt="Pins in robot" width="600px" height="auto">
+      <li>Move your pins into the mini breadboard, long side down.</li>
+      <p>This will keep them straight and in position, making them easier to solder.</p>
+      <img src=".\images\pins_in_breadboard.JPG" alt="Pins in breadboard" width="600px" height="auto">
+      <p>Think about where on the breadboard to put your pins - make sure the edge connector won't get in the way!</p>
   </div>
 
   <div id="step4" class="left">
-    <h3>Step 4</h3>
-    <p>Plug the USB cable into a power source.</p>
-    <p>While charging, you should see a red light, which turns blue when the battery is fully charged.</p>
-    <img src=".\images\charging1.JPG" alt="battery charging" width="600px" height="auto">
-    <img src=".\images\charging2.JPG" alt="battery charged" width="600px" height="auto">
+    <h3>Step 4 - solder your pins to your robot</h3>
+    <ol>
+      <li>Push the pin connectors (inside the breadboard) through the holes on the circuit board.</li>
+      <li>Turn your board upside down so that the side you are soldering to is visible.</li>
+      <img src=".\images\pins_ready.JPG" alt="Pins ready to solder" width="600px" height="auto">
+      <li>Solder all 13 pins to the board.</li>
+      <li>Check your joints - make sure none of them are touching as this can create a short circuit.</li>
+      <li>Remove the breadboard from the pins.</li>
+      <img src=".\images\pins_soldered.JPG" alt="Pins attached to robot" width="600px" height="auto">
+    </ol>
   </div>
 
   <div id="step5" class="left">
-    <h3>Step 5</h3>
-    <p>Unplug the charger, and plug the battery back into the cable on the robot.</p>
+    <h3>Connect something to your new pins</h3>
+    <p><a href="extensions.html">Go back to the Extensions page to get some ideas.</a></p>
   </div>
 
   <footer class="links bg_pink">

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Creative Computing Club - Robochallenge</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Creative Computing Club - Robochallenge</h1>
+  </header>
+
+  <div id="intro">
+    <p>On this page you will find example code and instructions for October 2019's Creative Computing Club, Robochallenge.</p>
+    <nav class="links bg_green">
+      <a href="#extensions">Jump to extension activities</a>
+    </nav>
+  </div>
+
+  <div id="set-up" class="left">
+    <br>
+    <h3>Set-up instructions</h3>
+    <p><strong>Ignore these instructions unless something has gone wrong!</strong></p>
+    <p>The initial joystick code <a href="https://github.com/ScienceOxford/micro-ant/blob/master/controller-code/joystick_working+buttons.py" target="_blank">can be found here</a>.</p>
+    <p>The initial robot code <a href="https://github.com/ScienceOxford/micro-ant/blob/master/robot-code/robot_starter.py" target="_blank">can be found here</a>.</p>
+    <p>Copy and paste the code into the <a href="https://codewith.mu/" target="_blank">Mu editor</a>.</p>
+    <p><em>Edit the radio.config instructions on line 8 to match your robot.</em></p>
+  </div>
+
+  <div id="starter" class="left">
+    <br>
+    <h3>Starter instructions</h3>
+    <p><strong>These instructions will help you to program the robot's motors.</strong></p>
+
+    <div id="starter1">
+      <h4>Step 1</h4>
+      <p>Plug your micro:bit into your computer. There is another USB port on the robot, use the one on the micro:bit itself!</p>
+      <img src=".\images\usb_ports.JPG" alt="usb port" width="600px" height="auto">
+      <p>In the starter code on your computer, find a blank line before <code>while True</code>, for example line 61.</p>
+      <img src=".\images\add_code_starter.PNG" alt="add code before 'while True'" width="600px" height="auto">
+      <p>Add the following code on this line:</p>
+      <pre>display.show(Image.HAPPY)</pre>
+      <p>Press the <strong>Flash</strong> button in Mu and wait for your code to copy over to your micro:bit.</p>
+      <p><strong>What happens?</strong></p>
+      <p><strong>What other images can you find?</strong></p>
+    </div>
+
+    <div id="starter2">
+      <h4>Step 2</h4>
+      <p>Some other code is running on the micro:bit, inside the <code>while True</code> loop.</p>
+      <p>Press the <strong>REPL</strong> button in Mu to open a <strong>terminal</strong>.</p>
+      <p>Now click the <strong>reset</strong> button on the micro:bit. This can be fiddly, so ask an adult for help if you need to.</p>
+      <img src=".\images\reset_button.JPG" alt="reset button" width="600px" height="auto">
+      <p><strong>What do you see in the terminal?</strong></p>
+      <p>Turn on your joystick, by flicking the switch on the right-hand-side.</p>
+      <p><strong>What do you see in the terminal now?</strong></p>
+      <p><strong>What happens when you move the joystick?</strong></p>
+    </div>
+
+    <div id="starter3">
+      <h4>Step 3</h4>
+      <p>The two numbers you are seeing, can be used to control the left and right motors.</p>
+      <p>This information is being sent, over the radio, from your joystick.</p>
+      <p>But it is not yet in a format that the motors can understand, so it needs converting.</p>
+      <p>Edit the code inside your <code>while True</code> loop, so that it looks like this:</p>
+      <pre>while True:
+    message = radio.receive()
+    if message is not None:
+        message = cut(message)
+        drive(message[0], message[1])</pre>
+      <p>Make sure that you only have <strong>one</strong> <code>while True</code> loop.</p>
+      <p>The above code will <strong>replace</strong> what was already there.</p>
+      <br>
+      <p><strong>How does this new code work?</strong></p>
+      <ol>
+        <li>The micro:bit checks for messages coming over the radio.</li>
+        <li>If the message is <code>None</code>, it ignores it. This means that it will not get confused if it doesn't get any messages, for example if your joystick is turned off!</li>
+        <li>The <code>cut</code> function is applied to the message. This function is further up the code, and splits the message into the two numbers, and tells the micro:bit that they really are numbers.</li>
+        <li>The <code>drive</code> function is used, to turn on the motors. It uses the first half (<code>message[0]</code>) of the radio message as the value for the left motor, and the second half (<code>message[1]</code>) as the value for the left motor.</li>
+        <li><code>while True</code> means that this code runs forever, so the motors will always turn by the amount the joystick tells them to!</li>
+      </ol>
+    </div>
+
+    <div id="starter4">
+      <h4>Testing</h4>
+      <p><strong>Flash</strong> your new code onto your micro:bit.</p>
+      <p>Debug any errors - you may get an error message scrolling across the micro:bit's screen!</p>
+      <p>When you are confident in your code, unplug your micro:bit from the computer.</p>
+      <p>Attach the cardboard body to your robot - <strong>this will protect the electronics before you start to drive it</strong> - and add some identifying features, such as your name or a cute face.</p>
+      <img src=".\images\robot_body.JPG" alt="reset button" width="600px" height="auto">
+      <p>Turn on your joystick, then turn on your robot by flicking the switch underneath - a light will turn on next to the switch.</p>
+      <img src=".\images\robot_switch.JPG" alt="reset button" width="600px" height="auto">
+      <p>Put your robot on the ground and try to drive it with your joystick.</p>
+      <p><strong>Does it work as you expect?</strong></p>
+      <p><strong>Do you need to do any debugging?</strong></p>
+    </div>
+
+  </div>
+
+  <div id="extensions" class="left">
+    <br>
+    <h3>Extension ideas</h3>
+    <p><strong>Choose an option below to find some instructions, or work on your own ideas.</strong></p>
+  </div>
+  <div>
+    <nav class="links bg_green">
+      <a href="speaker.html">Add music to your robot</a>
+      <a href="motor_adjust.html">Help your robot to drive in a straight line</a>
+      <a href="buttons.html">Use the buttons on your controller</a>
+    </nav>
+  </div>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/micro-ant" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+</html>

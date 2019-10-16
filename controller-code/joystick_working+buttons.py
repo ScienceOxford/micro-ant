@@ -37,11 +37,23 @@ while True:
     joystick = joystick_push()
     button = button_press()
     if button == 'A':
-        radio.send('hello')
-        sleep(500)
+        radio.send('A')
+        sleep(100)
     elif button == 'B':
-        radio.send('duck')
-        sleep(500)
+        radio.send('B')
+        sleep(100)
+    elif button == 'C':
+        radio.send('C')
+        sleep(100)
+    elif button == 'D':
+        radio.send('D')
+        sleep(100)
+    elif button == 'E':
+        radio.send('E')
+        sleep(100)
+    elif button == 'F':
+        radio.send('F')
+        sleep(100)
     else:
         message = str(joystick[0]) + " " + str(joystick[1])
         radio.send(message)

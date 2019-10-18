@@ -15,14 +15,14 @@
   </header>
 
   <div id="intro" class="left">
-    <p>The values your joystick is sending, is not the highest values the motors can understand. You can adjust these to make the robot faster!</p>
+    <p>The values your joystick is sending, are not the highest values the motors can understand. You can adjust these to make the robot faster!</p>
   </div>
 
   <div id="step1" class="left">
     <h3>Step 1</h3>
     <p>Before speeding up your robot, you must find out what values are being sent by your joystick.</p>
-    <p>To do this, you will use the code we used at the beginning of the session!.</p>
-    <p>During testing, you <strong>do not</strong> want the robot to drive around.</p>
+    <p>To do this, you will use the code we used at the beginning of the session!</p>
+    <p>During testing, you <strong>do not</strong> want your robot to drive around.</p>
     <p>Use the # symbol on your keyboard to tell the micro:bit to ignore your <code>drive</code> line of code:</p>
     <pre>#drive(left, right)</pre>
     <p>It should turn grey in Mu.</p>
@@ -56,8 +56,8 @@
 right = int(message[2]*1.2)</pre>
     <p>Test these values using the <strong>REPL</strong>:</p>
     <ul>
-      <li>Do you ever get a value higher than 1023? If so, multiply by a smaller number, e.g. 1.15 or 1.1.</li>
-      <li>Are your values still too small? If so, muliply by a bigger number, e.g. 1.25 or 1.3.</li>
+      <li>Do you ever get a value higher than 1023? If so, multiply by a smaller number, e.g. 1.15 or 1.1</li>
+      <li>Are your values still too small? If so, muliply by a bigger number, e.g. 1.25 or 1.3</li>
     </ul>
     <p>Keep adjusting until you get the best possible speed out of your motors.</p>
     <p><em><a href="https://github.com/ScienceOxford/micro-ant/blob/master/robot-code/examples/speed.py" target="_blank">Click here to see the example code in full.</a></em></p>

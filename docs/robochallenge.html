@@ -71,7 +71,9 @@
     message = radio.receive()
     if message is not None:
         message = cut(message)
-        drive(message[0], message[1])</pre>
+        left = message[0]
+        right = message[1]
+        drive(left, right)</pre>
       <p>Make sure that you only have <strong>one</strong> <code>while True</code> loop.</p>
       <p>The above code will <strong>replace</strong> what was already there.</p>
       <br>
@@ -79,9 +81,11 @@
       <ol>
         <li>The micro:bit checks for messages coming over the radio.</li>
         <li>If the message is <code>None</code>, it ignores it. This means that it will not get confused if it doesn't get any messages, for example if your joystick is turned off!</li>
-        <li>The <code>cut</code> function is applied to the message. This function is further up the code, and splits the message into the two numbers, and tells the micro:bit that they really are numbers.</li>
-        <li>The <code>drive</code> function is used, to turn on the motors. It uses the first half (<code>message[0]</code>) of the radio message as the value for the left motor, and the second half (<code>message[1]</code>) as the value for the left motor.</li>
-        <li><code>while True</code> means that this code runs forever, so the motors will always turn by the amount the joystick tells them to!</li>
+        <li>The <code>cut</code> function is applied to the message. This function is further up the code. It splits the message into two numbers, and tells the micro:bit that they really are numbers instead of text!</li>
+        <li>The <em>variable</em> <code>left</code> is set to the first half of the message - <code>message[0]</code>. Remember that Python starts counting from zero!</li>
+        <li>The <em>variable</em> <code>right</code> is set to the second half of the message.</li>
+        <li>The <code>drive</code> function is used, to turn on the motors, using our new values of <code>left</code> and <code>right</code>.</li>
+        <li>Because this code is inside a <code>while True</code> loop, when it has turned on the motors, it will go back to the top of the loop, and check what the next message the joystick has sent is.</li>
       </ol>
     </div>
 
@@ -110,6 +114,7 @@
     <nav class="links bg_green">
       <a href="speaker.html">Add music to your robot</a>
       <a href="motor_adjust.html">Help your robot to drive in a straight line</a>
+      <a href="speed.html">Increase your robot's speed</a>
       <a href="buttons.html">Use the buttons on your controller</a>
     </nav>
   </div>

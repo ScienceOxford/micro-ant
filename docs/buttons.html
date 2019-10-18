@@ -20,11 +20,37 @@
 
   <div id="step1" class="left">
     <h3>Step 1</h3>
-    <p>instructions...</p>
+    <p>Your joystick sends a radio message whenever a button is pressed.</p>
+    <p>If you press button A, it sends the message <code>"A"</code>, if you press button F, it sends the message <code>"F"</code>, and so on.</p>
+    <p>At the moment, your robot program checks for messages, checks that the message is not <code>None</code>, then tries to split that message and send it to the motors.</p>
+    <p>Before trying to split the message, you can first check if the message is one of the button presses instead:</p>
+    <pre>    if message is not None:
+        if message == "C":
+            display.show(Image.HAPPY)
+        else:
+            message = cut(message)</pre>
+    <p><strong>The above code is not complete</strong> - compare it to your current code, and work out where the new parts will need to go.</p>
+    <p><em>Be careful of the indentation!</em></p>
+    <p><strong>Do you get an image showing up on your robot's micro:bit, when you press button C on your controller?</strong></p>
+  </div>
+
+  <div id="step2" class="left">
+    <h3>Step 2</h3>
+    <p>Once you have got one button working, you can add in some others.</p>
+    <p>Try this code:</p>
+    <pre>        if message == "C":
+            display.show(Image.HAPPY)
+        elif message == "F":
+            display.scroll("Hello!")
+        else:
+            message = cut(message)</pre>
+    <p><code>elif</code> is short for <strong>else if</strong>. It goes between a first <code>if</code> and a final <code>else</code>.</p>
+    <p>Play around with the different buttons, and think about what you want to happen when you press them!</p>
+    <p><em><a href="https://github.com/ScienceOxford/micro-ant/blob/master/robot-code/examples/buttons.py" target="_blank">Click here to see the example code in full.</a></em></p>
   </div>
 
   <footer class="links bg_pink">
-    <a href="index.html">Go Back</a>
+    <a href="robochallenge.html#extensions">Go Back</a>
   </footer>
 
 </body>

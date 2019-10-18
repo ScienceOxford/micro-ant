@@ -61,6 +61,12 @@ def cut(value):
     except:
         return 0, 0
 
+display.show(Image.DUCK)
+
 while True:
     message = radio.receive()
-    print(message)
+    if message is not None:
+        message = cut(message)
+        left = int(message[0]*1.2)
+        right = int(message[1]*1.2)
+        drive(left, right)

@@ -33,6 +33,8 @@ def joystick_push():
     right = (y - x)
     return left, right
 
+display.show(Image.YES)
+
 while True:
     joystick = joystick_push()
     button = button_press()

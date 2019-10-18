@@ -11,7 +11,7 @@
 <body>
   <header>
     <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
-    <h1>Helping your Robot Drive in a Straight Line</h1>
+    <h1>Helping your to Robot Drive in a Straight Line</h1>
   </header>
 
   <div id="intro" class="left">
@@ -20,11 +20,28 @@
 
   <div id="step1" class="left">
     <h3>Step 1</h3>
-    <p>instructions...</p>
+    <p>Before editing the code, you must work out which motor is turning the fastest.</p>
+    <p>Drive your robot forwards and check which direction it turns in.</p>
+    <p>If it turns slightly <em>left</em>, then the <em>right</em> wheel is turning faster than the left one.</p>
+    <img src=".\images\wheel--speeds.gif" alt="wheel speeds animation" width="600px" height="auto">
+  </div>
+
+  <div id="step2" class="left">
+    <h3>Step 2</h3>
+    <p>In your <code>while True</code> loop, you have two variables, <code>left</code> and <code>right</code>.</p>
+    <p>You will need to edit just one of these lines of code, to slow down your fastest wheel.</p>
+    <p>To make the left wheel turn at half the speed of the right wheel, multiply it by 0.5.</p>
+    <p>After you have adjusted the value, it will probably not be a whole number any more!</p>
+    <p>You must turn it into a whole number before it can be used. <code>int(number)</code> will turn a number into an <em>integer</em>, which means a whole number.</p>
+    <p>Look at the example code below, then adjust your own program:</p>
+    <pre>left = int(message[0]*0.5)</pre>
+    <p><strong>Half-speed will probably be too slow for your robot, so adjust the number until you are happy with it!</strong></p>
+    <p><em>Multiplying by 0.99, will give you a number pretty close to full speed, multiplying by 0.75 will give you three-quarters of the speed.</em></p>
+    <p><em><a href="https://github.com/ScienceOxford/micro-ant/blob/master/robot-code/examples/wheel_adjustment.py" target="_blank">Click here to see the example code in full.</a></em></p>
   </div>
 
   <footer class="links bg_pink">
-    <a href="index.html">Go Back</a>
+    <a href="robochallenge.html#extensions">Go Back</a>
   </footer>
 
 </body>

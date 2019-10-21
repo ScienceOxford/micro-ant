@@ -64,3 +64,4 @@ def cut(value):
 while True:
     message = radio.receive()
     print(message)
+    sleep(100)

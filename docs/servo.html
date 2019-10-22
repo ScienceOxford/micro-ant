@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>micro:bit antweight information</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo"width="400px" height="auto"></a>
+    <h1>Connecting & Programming a Servo</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>Follow the instructions below to connect your servo to your robot, then program it to move!</p>
+    <p><a href="pins.html" target="_blank">If you have not yet soldered the pin connectors onto your robot, click here.</a></p>
+  </div>
+
+  <div id="wiring" class="left">
+    <h3>Wiring</h3>
+
+    <section id="wire_step1">
+      <p><strong>Step 1: </strong>collect your supplies</p>
+      <ol type="A">
+        <li>Your robot, with pin connectors</li>
+        <li>A servo motor</li>
+      </ol>
+      <img src=".\images\servo_components.JPG" alt="Components: robot, servo" width="600px" height="auto">
+    </section>
+
+    <section id="wire_step2">
+      <p><strong>Step 2: </strong>if it has not been done for you already, seperate the three servo wires from their black plastic <em>DuPont connector</em>.</p>
+      <img src=".\images\servo_wires1.JPG" alt="Close-up of servo wires" width="600px" height="auto">
+    </section>
+
+    <section id="wire_step3">
+      <p><strong>Step 3: </strong>connect the wires to your robot</p>
+      <ul>
+        <li>The <strong>brown</strong> wire to a <strong>GND</strong> pin</li>
+        <li>The <strong>red</strong> wire to a <strong>3V3</strong> pin</li>
+        <li>The <strong>orange</strong> wire to a signal pin (the code below uses <strong>pin 12</strong>)</li>
+      </ul>
+      <img src=".\images\servo_wires2.JPG" alt="Robot with servo wires attached" width="600px" height="auto">
+    </section>
+
+    <section id="wire_notes">
+      <p><strong>Notes:</strong> information about the components</p>
+      <ul>
+        <li>A servo motor is a geared motor which can turn approximately 180 degrees.</li>
+        <li>You can control their precise movement, so they can be set to turn to a specific position.</li>
+        <li>You can connect a servo directly to a micro:bit, instead of using your robot, by using crocodile clips. The robot is not required for the code below to work.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="code" class="left">
+    <h3>Programming</h3>
+
+    <section id="code_step1">
+      <p><strong>Step 1: </strong>setting a position</p>
+      <p>Open your robot program <a href="https://github.com/ScienceOxford/robocamp-2019-saved-files" target="_blank">(if you were at Robocamp, click here to find yours)</a></p>
+      <p>You are going to add new code near the top of your program, underneath <code>import radio</code> and above <code>radio.config</code>.</p>
+      <img src=".\images\add_code.png" alt="Position of new code, between 'import radio' and 'radio.config'" width="600px" height="auto">
+      <p>In this spot, add the following code:</p>
+      <pre><code>pin12.write_analog(50)</code></pre>
+      <p>Does your servo move?</p>
+    </section>
+
+    <section id="code_step2">
+      <p><br><strong>Step 2: </strong>working out the range</p>
+      <p>Change the number <code>50</code> - can you get your servo to move to a different position? <em>The maximum number you can use is <code>1023</code>.</em></p>
+      <p><strong>If your servo is buzzing loudly, the number you last gave it is not a position it can move to.</strong></p>
+      <p>Work out the range of positions that your servo can move to, then stick with those. <em>If you use numbers outside of its range for too long, the servo will get hot and will stop working.</em></p>
+    </section>
+
+    <section id="code_step3">
+      <p><br><strong>Step 3: </strong>physically using your servo</p>
+      <ul>
+        <li>What do you want your servo to do?</li>
+        <li>Control some waving arms, or a mechanism to push or flip things over?</li>
+        <li>What do you want to attach to your servo?</li>
+        <li>Design something in Tinkercad or use found materials such as lollysticks?</li>
+      </ul>
+    </section>
+
+    <section id="code_step4">
+      <p><br><strong>Step 4: </strong>using the servo in your robot code</p>
+      <p>So far, you have tested code so that it runs at the start of your program.</p>
+      <p>Think about when you want a your robot to turn the servo...</p>
+      <ul>
+        <li>When you press a <a href="https://www.instructables.com/id/Programming-a-MicroBit-Robot-JoystickBit-Controlle/#step9" target="_blank">button on your joystick</a>?</li>
+        <li>At a set point in a dance routine?</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="links bg_pink">
+    <a href="extensions.html">Go Back</a>
+  </footer>
+
+</body>
+</html>

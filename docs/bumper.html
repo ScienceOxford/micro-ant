@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>micro:bit antweight information</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo"width="400px" height="auto"></a>
+    <h1>Connecting & Programming a Bumper Switch</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>Follow the instructions below to connect your switch to your robot, then program your robot to react to it being pressed!</p>
+    <p><a href="pins.html" target="_blank">If you have not yet soldered the pin connectors onto your robot, click here.</a></p>
+  </div>
+
+  <div id="wiring" class="left">
+    <h3>Wiring</h3>
+
+    <section id="wire_step1">
+      <p><strong>Step 1: </strong>collect your supplies</p>
+      <ol type="A">
+        <li>Your robot, with pin connectors</li>
+        <li>A bumber switch</li>
+        <li>One jump lead</li>
+        <li>Protective mat</li>
+        <li>Soldering iron (plus stand and sponge)</li>
+        <li>Solder</li>
+        <li>Wire cutters</li>
+      </ol>
+      <img src=".\images\switch_components.JPG" alt="Components" width="600px" height="auto">
+    </section>
+
+    <section id="wire_step2">
+      <p><strong>Step 2: </strong>solder wires to your switch.</p>
+      <ol>
+        <li>Cut the jump lead in half using the wire cutters.</li>
+        <li>Strip the insulation from both halves.</li>
+        <li>Solder one half to the middle pin of your switch.</li>
+        <li>Solder the other half to the back pin (where the metal latch of the switch meets the body) of your switch.</li>
+      </ol>
+      <img src=".\images\switch_wires1.JPG" alt="Soldered wires" width="600px" height="auto">
+    </section>
+
+    <section id="wire_step3">
+      <p><strong>Step 3: </strong>connect the wires to your robot</p>
+      <ul>
+        <li>The <strong>middle</strong> wire to a <strong>3V3</strong> pin</li>
+        <li>The other wire to a signal pin (the code below uses <strong>pin 12</strong>)</li>
+      </ul>
+      <img src=".\images\speaker_wires2.JPG" alt="Robot with servo wires attached" width="600px" height="auto">
+    </section>
+
+    <section id="wire_notes">
+      <p><strong>Notes:</strong> information about the components</p>
+      <ul>
+        <li>This kind of switch is known as a <em>microswitch</em>.</li>
+        <li>The jump wires we are using are known as 'female' wires - these are slots, which connect with 'male' pointy wires, such as those on your robot.</li>
+        <li>You can connect a switch directly to a micro:bit, instead of using your robot, by using crocodile clips. The robot is not required for the code below to work.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="code" class="left">
+    <h3>Programming</h3>
+
+    <section id="code_step1">
+      <p><strong>Step 1: </strong>testing your switch</p>
+      <p>Open your robot program <a href="https://github.com/ScienceOxford/robocamp-2019-saved-files" target="_blank">(if you were at Robocamp, click here to find yours)</a></p>
+      <p>You are going to add new code near the top of your program, underneath <code>import radio</code> and above <code>radio.config</code>.</p>
+      <img src=".\images\add_code.png" alt="Position of new code, between 'import radio' and 'radio.config'" width="600px" height="auto">
+      <p>In this spot, add the following code:</p>
+      <pre><code>switch = pin12.read_digital()
+display.show(switch)
+sleep(1000)</code></pre>
+      <p>Do you get a <code>0</code> showing on your screen?</p>
+      <p>What do you see if you run the code for the first time while <strong>holding down the switch</strong>?</p>
+      <p>Unplug your robot from the computer to make it easier to test - you can restart the code by turning it off and on again.</p>
+      <p>You should get <code>0</code> when the switch is not pressed, and <code>1</code> when it <strong>is</strong> pressed. If not, check your code and your wiring.</p>
+      <img src=".\images\test_code.JPG" alt="Testing switch pressed" width="600px" height="auto">
+    </section>
+
+    <section id="code_step2">
+      <p><br><strong>Step 2: </strong>the logic of a bumper switch</p>
+      <p>In this example, we are going to make your robot stop moving when the bumper switch is pressed, even if you continue to move your joystick.</p>
+      <p>You can then improve this code by, for example, allowing you robot to move backwards to move away from the obstacle.</p>
+      <p>Plug your micro:bit back into the computer, and remove the three new lines of code you added at the start of your program.</p>
+      <p>At the bottom your program, in your <code>while True</code> loop, ask the micro:bit to check the status of it's switch, <strong>as well as</strong> doing everything else.</p>
+      <pre>while True:
+    switch = pin12.read_digital()  # this is your new line!!
+    message = radio.receive()</pre>
+      <p>The next part of your code tells the micro:bit to turn on the motors if the <code>message is not None</code>. Before doing this though, you want to check if the switch has been pushed or not!</p>
+      <p>From your checks earlier, you know that switch is <code>1</code> if it has been pushed, so you can edit the code to look like this:</p>
+      <pre>    if message is not None:
+        message = message.split()
+        if switch == 1:
+            display.show(Image.NO)
+        else:
+            drive(int(message[0]), int(message[1]))</pre>
+      <p>Now, if the switch is pressed, the robot will show an image instead of turning on the motors.</p>
+      <p><strong>Test it out!</strong></p>
+    </section>
+
+    <section id="code_step3">
+      <p><br><strong>Step 3: </strong>expanding this code</p>
+      <p>Instead of stopping the robot completely, you can check if the joystick is trying to move it in a forwards or backwards direction.</p>
+      <p>Some hints:</p>
+      <ul>
+        <li><code>int(message[0])</code> is the value being given to the left wheel.</li>
+        <li><code>and</code> and <code>or</code> are valid commands in python.</li>
+        <li><code>></code> means <em>greater than</em>, and <code><=</code> means <em>less than or equal to</em>.</li>
+      </ul>
+      <p>See if you can combine these things to make your robot behave how you want.</p>
+    </section>
+
+    <section id="assembly">
+      <p><br><strong>Step 4: </strong>fixing the switch to your robot</p>
+      <p>Think about where your bumper needs to go, and what you want it to detect.</p>
+      <ul>
+        <li>Should it go on the front or the side?</li>
+        <li>Could you attach more than one bumper (you will need to write code for them both!)</li>
+        <li>You can extend the reach of the switch by attaching things to it, for example lolly sticks.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="links bg_pink">
+    <a href="extensions.html">Go Back</a>
+  </footer>
+
+</body>
+</html>

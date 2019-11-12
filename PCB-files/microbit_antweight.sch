@@ -56,7 +56,7 @@ U 1 1 5CB841A4
 P 2400 3150
 F 0 "U1" H 2400 3500 60  0000 C CNN
 F 1 "LipoCharger" H 2400 2800 60  0000 C CNN
-F 2 "lipochargeredits:LipoCharger" H 2400 3150 60  0001 C CNN
+F 2 "microbit_antweight:LipoCharger" H 2400 3150 60  0001 C CNN
 F 3 "" H 2400 3150 60  0001 C CNN
 	1    2400 3150
 	1    0    0    -1  
@@ -78,7 +78,7 @@ U 1 1 5CB8431D
 P 4250 1750
 F 0 "D1" H 4250 1850 50  0000 C CNN
 F 1 "LED" H 4250 1650 50  0000 C CNN
-F 2 "led:LED_3mm_Radial" H 4250 1750 50  0001 C CNN
+F 2 "microbit_antweight:LED_3mm_Radial" H 4250 1750 50  0001 C CNN
 F 3 "" H 4250 1750 50  0001 C CNN
 	1    4250 1750
 	-1   0    0    1   
@@ -89,7 +89,7 @@ U 1 1 5CB84382
 P 4300 2150
 F 0 "C1" V 4450 2100 50  0000 L CNN
 F 1 "1uF" V 4150 2100 50  0000 L CNN
-F 2 "capacitor:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 4338 2000 50  0001 C CNN
+F 2 "microbit_antweight:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 4338 2000 50  0001 C CNN
 F 3 "" H 4300 2150 50  0001 C CNN
 	1    4300 2150
 	0    -1   -1   0   
@@ -100,7 +100,7 @@ U 1 1 5CB847F8
 P 4000 3000
 F 0 "U3" V 4150 3250 60  0000 C CNN
 F 1 "MotorDriver" V 4250 3350 60  0000 C CNN
-F 2 "motordriver:MotorDriver" H 4000 3000 60  0001 C CNN
+F 2 "microbit_antweight:MotorDriver" H 4000 3000 60  0001 C CNN
 F 3 "" H 4000 3000 60  0001 C CNN
 	1    4000 3000
 	0    1    1    0   
@@ -111,7 +111,7 @@ U 1 1 5CB84866
 P 3650 4000
 F 0 "C2" V 3500 3950 50  0000 L CNN
 F 1 "1uF" V 3800 3950 50  0000 L CNN
-F 2 "capacitor:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 3688 3850 50  0001 C CNN
+F 2 "microbit_antweight:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 3688 3850 50  0001 C CNN
 F 3 "" H 3650 4000 50  0001 C CNN
 	1    3650 4000
 	0    1    1    0   
@@ -122,7 +122,7 @@ U 1 1 5CB848C8
 P 2550 4000
 F 0 "C3" V 2700 3950 50  0000 L CNN
 F 1 "1uF" V 2400 3950 50  0000 L CNN
-F 2 "capacitor:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 2588 3850 50  0001 C CNN
+F 2 "microbit_antweight:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 2588 3850 50  0001 C CNN
 F 3 "" H 2550 4000 50  0001 C CNN
 	1    2550 4000
 	0    -1   -1   0   
@@ -133,7 +133,7 @@ U 1 1 5CB84AB4
 P 3100 4000
 F 0 "U2" H 3100 3850 50  0000 C CNN
 F 1 "MCP1700-3302E_TO92" H 2650 3750 50  0000 L CNN
-F 2 "regulator:TO-92-3" H 3100 3800 50  0001 C CIN
+F 2 "microbit_antweight:TO-92-3" H 3100 3800 50  0001 C CIN
 F 3 "" H 3100 4000 50  0001 C CNN
 	1    3100 4000
 	-1   0    0    1   
@@ -144,7 +144,7 @@ U 1 1 5CB84BB9
 P 6400 3900
 F 0 "J5" H 6450 5950 50  0000 C CNN
 F 1 "microbit_edge_connector" H 6450 5850 50  0000 C CNN
-F 2 "microbit_edge_connector:microbit_edge_connector" H 6300 3800 50  0001 C CNN
+F 2 "microbit_antweight:microbit_edge_connector" H 6300 3800 50  0001 C CNN
 F 3 "" H 6300 3800 50  0001 C CNN
 	1    6400 3900
 	-1   0    0    1   
@@ -157,7 +157,7 @@ U 1 1 5CB84CB1
 P 2300 1850
 F 0 "S1" H 2150 1940 50  0000 C CNN
 F 1 "switch" H 2300 1640 50  0000 C CNN
-F 2 "slide_switch:slide_switch" H 2500 2050 50  0001 L CNN
+F 2 "microbit_antweight:slide_switch" H 2500 2050 50  0001 L CNN
 F 3 "http://spec_sheets.e-switch.com/specs/P040040.pdf" H 2500 2150 60  0001 L CNN
 F 4 "EG1903-ND" H 2500 2250 60  0001 L CNN "Digi-Key_PN"
 F 5 "EG1218" H 2500 2350 60  0001 L CNN "MPN"
@@ -298,7 +298,7 @@ U 1 1 5CB8A8DA
 P 8100 2550
 F 0 "J8" H 8100 2850 50  0000 C CNN
 F 1 "Conn_PINS" H 8100 2250 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x05_Pitch2.54mm" H 8100 2550 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x05_Pitch2.54mm" H 8100 2550 50  0001 C CNN
 F 3 "" H 8100 2550 50  0001 C CNN
 	1    8100 2550
 	1    0    0    -1  
@@ -309,7 +309,7 @@ U 1 1 5CB8AB57
 P 8100 3750
 F 0 "J9" H 8100 3850 50  0000 C CNN
 F 1 "Conn_SER" H 8100 3550 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x02_Pitch2.54mm" H 8100 3750 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x02_Pitch2.54mm" H 8100 3750 50  0001 C CNN
 F 3 "" H 8100 3750 50  0001 C CNN
 	1    8100 3750
 	1    0    0    -1  
@@ -320,7 +320,7 @@ U 1 1 5CB8ACDA
 P 3100 3100
 F 0 "J1" H 3100 3200 50  0000 C CNN
 F 1 "Conn_BAT" H 3100 2900 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x02_Pitch_large_battery" H 3100 3100 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x02_Pitch_large_battery" H 3100 3100 50  0001 C CNN
 F 3 "" H 3100 3100 50  0001 C CNN
 	1    3100 3100
 	1    0    0    -1  
@@ -331,7 +331,7 @@ U 1 1 5CB8D4AE
 P 4750 2050
 F 0 "J2" H 4750 2150 50  0000 C CNN
 F 1 "Conn_MOT_INT" H 4750 1850 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x02_Pitch2.54mm" H 4750 2050 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x02_Pitch2.54mm" H 4750 2050 50  0001 C CNN
 F 3 "" H 4750 2050 50  0001 C CNN
 	1    4750 2050
 	1    0    0    -1  
@@ -342,7 +342,7 @@ U 1 1 5CB8D9E8
 P 8100 1900
 F 0 "J7" H 8100 2000 50  0000 C CNN
 F 1 "Conn_MOT_EXT" H 8100 1700 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x02_Pitch2.54mm_battery" H 8100 1900 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x02_Pitch2.54mm_battery" H 8100 1900 50  0001 C CNN
 F 3 "" H 8100 1900 50  0001 C CNN
 	1    8100 1900
 	1    0    0    -1  
@@ -353,7 +353,7 @@ U 1 1 5CB8E491
 P 4300 4050
 F 0 "J4" V 4300 4150 50  0000 C CNN
 F 1 "Conn_MOT_A" V 4450 4000 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x02_Pitch_large" H 4300 4050 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x02_Pitch_large_doubled" H 4300 4050 50  0001 C CNN
 F 3 "" H 4300 4050 50  0001 C CNN
 	1    4300 4050
 	0    1    1    0   
@@ -364,7 +364,7 @@ U 1 1 5CB8E714
 P 5150 2950
 F 0 "J3" V 5150 3050 50  0000 C CNN
 F 1 "Conn_MOT_B" V 5300 2900 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_1x02_Pitch_large" H 5150 2950 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_1x02_Pitch_large_doubled" H 5150 2950 50  0001 C CNN
 F 3 "" H 5150 2950 50  0001 C CNN
 	1    5150 2950
 	0    -1   -1   0   
@@ -375,7 +375,7 @@ U 1 1 5CB91E92
 P 7800 3250
 F 0 "J6" H 7850 3450 50  0000 C CNN
 F 1 "Conn_POW" H 7850 3050 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_2x03_Pitch2.54mm" H 7800 3250 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_2x03_Pitch2.54mm" H 7800 3250 50  0001 C CNN
 F 3 "" H 7800 3250 50  0001 C CNN
 	1    7800 3250
 	1    0    0    -1  
@@ -410,7 +410,7 @@ U 1 1 5CFE7311
 P 7950 5150
 F 0 "J10" H 8000 5250 50  0000 C CNN
 F 1 "Conn_REG" H 7950 5350 50  0000 C CNN
-F 2 "pins:Pin_Header_Straight_2x02_Pitch2.54mm" H 7950 5150 50  0001 C CNN
+F 2 "microbit_antweight:Pin_Header_Straight_2x02_Pitch2.54mm" H 7950 5150 50  0001 C CNN
 F 3 "" H 7950 5150 50  0001 C CNN
 	1    7950 5150
 	1    0    0    -1  
@@ -431,8 +431,8 @@ L MCP1700-5002E_TO92 U4
 U 1 1 5CFE79F9
 P 9100 5150
 F 0 "U4" H 9100 5000 50  0000 C CNN
-F 1 "MCP1700-5002E_TO92" H 8900 5550 50  0000 L CNN
-F 2 "regulator:TO-92-3" H 9100 4950 50  0001 C CIN
+F 1 "MCP1702-5002E_TO92" H 8900 5550 50  0000 L CNN
+F 2 "microbit_antweight:TO-92-3" H 9100 4950 50  0001 C CIN
 F 3 "" H 9100 5150 50  0001 C CNN
 	1    9100 5150
 	1    0    0    -1  
@@ -454,7 +454,7 @@ U 1 1 5CFE8124
 P 9750 5150
 F 0 "C5" V 9900 5100 50  0000 L CNN
 F 1 "1uF" V 9600 5100 50  0000 L CNN
-F 2 "capacitor:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 9788 5000 50  0001 C CNN
+F 2 "microbit_antweight:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 9788 5000 50  0001 C CNN
 F 3 "" H 9750 5150 50  0001 C CNN
 	1    9750 5150
 	0    -1   -1   0   
@@ -465,7 +465,7 @@ U 1 1 5CFE84C7
 P 8550 4900
 F 0 "C4" V 8700 4850 50  0000 L CNN
 F 1 "1uF" V 8400 4850 50  0000 L CNN
-F 2 "capacitor:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 8588 4750 50  0001 C CNN
+F 2 "microbit_antweight:C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal" H 8588 4750 50  0001 C CNN
 F 3 "" H 8550 4900 50  0001 C CNN
 	1    8550 4900
 	0    -1   -1   0   

@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# LipoCharger
+#
+DEF LipoCharger U 0 40 Y Y 1 F N
+F0 "U" 0 350 60 H V C CNN
+F1 "LipoCharger" 0 -350 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -400 -300 400 300 0 1 0 N
+X IN+ 1 -500 250 100 R 50 50 1 1 I
+X IN- 2 -500 -250 100 R 50 50 1 1 I
+X OUT- 3 500 -250 100 L 50 50 1 1 I
+X BAT- 4 500 -150 100 L 50 50 1 1 I
+X BAT+ 5 500 150 100 L 50 50 1 1 I
+X OUT+ 6 500 250 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

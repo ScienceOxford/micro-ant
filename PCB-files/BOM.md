@@ -2,7 +2,7 @@
 
 | Designator         | Package                                          | Quant | Designation        | Example Supplier                                                            |
 | ------------------ | ------------------------------------------------ | ----- | ------------------ | --------------------------------------------------------------------------- |
-| C1, C2, C3, C4, C5 | C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal          | 3     | 1uF                | <https://www.aliexpress.com/item/32848919879.html> |
+| C1, C2, C3         | C_Axial_L3.8mm_D2.6mm_P5.0mm_Horizontal          | 3     | 1uF                | <https://www.aliexpress.com/item/32848919879.html> |
 | D1                 | LED_3mm_Radial                                   | 1     |                    |  |
 | J1                 | XH plug connector                                | 1     |                    | <https://www.aliexpress.com/item/32761581540.html> |
 | J1                 | 3.7V 1S LiPo Battery (XH plug)                   | 1     |                    | <https://www.aliexpress.com/item/32846780139.html> |

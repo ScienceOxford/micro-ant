@@ -22,7 +22,7 @@ buttons = {2: 'A',
 def button_press():
     press = pin2.read_analog()
     if press < 900:
-        for number in range(press-5, press+5):
+        for number in range(press-10, press+10):
             if number in buttons:
                 return buttons[number]
 
